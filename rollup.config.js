@@ -1,15 +1,17 @@
-import typescript from "@rollup/plugin-typescript"
+import typescript from "@rollup/plugin-typescript";
 
 /** @type {import("rollup").RollupOptions} */
-export default {
+const config = {
     external: ["@rollup/pluginutils"],
     input: "index.ts",
-    output:[
+    output: [
         {
             dir: "dist",
             format: "cjs",
-            sourcemap: true
-        }
+            sourcemap: true,
+        },
     ],
-    plugins: [typescript()]
-}
+    plugins: [typescript()],
+};
+
+export default config;
